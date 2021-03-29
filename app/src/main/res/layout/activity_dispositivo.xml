@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.galpndeavescontroldeluz.ui.dispositivo.DispositivoActivity"
+    >
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:id="@+id/update_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar reloj"
+        />
+    <Spinner
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:id="@+id/lista_galpones"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/update_time"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        />
+
+    <ListView
+        android:id="@+id/lista_horarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_below="@+id/lista_galpones"
+        />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lista_horarios"
+        android:textAlignment="center"
+        android:text="Mensaje recibido:\n..."
+        />
+</RelativeLayout>
